@@ -11,17 +11,15 @@
     max-width: 1170px;
     margin: auto;
     padding: 0 15px;
-
 }
 
 body{
-    overflow: hidden;
     font-family: "Poppins", sans-serif;
 }
 
 /* header */
 .header{
-    position: absolute;
+    position: static;
     left: 0;
     top: 0;
     width: 100%;
