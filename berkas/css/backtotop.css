@@ -1,0 +1,17 @@
+#backToTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    height: 40px;
+    width: 40px;
+    background-color:red;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#backToTopBtn:hover {
+    background-color:rgb(255, 94, 94);
+}

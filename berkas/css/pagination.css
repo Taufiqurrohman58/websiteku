@@ -1,0 +1,35 @@
+.pagination{
+    text-align: center;
+    position: relative;
+    display: flex;
+            align-items: center;
+        justify-content: center;
+}
+
+.box{
+    display: flex;
+}
+
+.box a{
+    display: flex;
+    text-decoration: none;
+        align-items: center;
+        justify-content: center;
+    position:relative;
+    margin: 7px;
+    height: 40px;
+    width: 40px;
+    color: white !important;
+}
+
+.box a.active{
+    background-color: red;
+}
+
+.box a:not(.active){
+    background-color: rgb(224, 224, 250);
+}
+
+.box a:hover{
+    background-color: red !important;
+}

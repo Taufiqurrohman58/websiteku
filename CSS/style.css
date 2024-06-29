@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:wght@300;400;500&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto&family=Vina+Sans&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+NG+Modern:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -14,7 +14,8 @@
 }
 
 body{
-    font-family: "Poppins", sans-serif;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
 }
 
 /* header */
@@ -37,9 +38,13 @@ body{
 .header .logo h1{
     color: red;
     font-size: 20px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
 }
 
 .header .logo h1 span{
+    
     color: black;
 }
 
@@ -278,11 +283,11 @@ body{
     bottom: -85px;
     right: -20px;
     height: 50px;
-    width: 275px;
+    width: 15em;
     display: flex;
     align-items: center;
-    background-color: black;
-    padding: 0.5px;
+    background-color: black
+    padding: 2px;
     border-radius: 6px;
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
     opacity: 0;
@@ -533,19 +538,236 @@ body{
     }
 }
 
+/* end header*/
 
-/* hero*/
-
-.container-bg{
+/* container-bg */
+.container-bg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -2;
     width: 100%;
     height: 200px;
-    background: url(img/bg.avif);
-    background-position:center;
-    background-size: cover;
-}
-.hero{
-    min-height: 100vh;
-    background-image: url(img/fiqur);
-    background-size: cover;
+    background: url(/IMG/bg.avif);
     background-position: center;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
 }
+
+.container-bg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity as needed */
+    z-index: -1;
+}
+
+.bg-content b{
+
+    color: red;
+    font-size: 50px;
+}
+
+@media (max-width: 480px) {
+    .bg-content b {
+        font-size: 35px;
+    }
+}
+/* end container-bg */
+
+
+/* section */
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+
+.mb-15 {
+  margin-bottom: 15px !important;
+}
+
+/* Section Padding */
+.section-padding-100 {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  border-bottom: 1px solid #DADADA;
+}
+
+
+.single-blog-post {
+  background-color: #eef3f6;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.single-blog-post .post-title {
+  font-size: 22px;
+  display: block;
+  font-weight: 400;
+  margin-bottom: 5px;
+  text-decoration: none;
+}
+
+.single-blog-post .post-title:hover,
+.single-blog-post .post-title:focus {
+  color: red;
+}
+
+.single-blog-post .post-meta {
+  margin-bottom: 30px;
+}
+
+.single-blog-post .post-meta p {
+  font-size: 12px;
+  color: red;
+  margin-bottom: 0;
+}
+
+.single-blog-post .post-meta p a {
+  font-size: 12px;
+  color: red;
+  font-weight: 500;
+}
+
+
+#main { 
+    margin-bottom:30px; 
+}
+.main .main_title { 
+    font-size:24px; 
+    font-weight:500; 
+    text-transform:uppercase; 
+}
+.main .main_body { 
+    /* text-align:justif;  */
+    line-height: 2; 
+    font-weight:normal; 
+}
+
+#widget { 
+    background-color: #eef3f6; 
+    padding: 20px; 
+    margin-bottom:30px; 
+}
+.widget .widget_title { 
+    font-size:20px; 
+    font-weight:500; 
+    text-transform:uppercase; 
+}
+
+.widget_title .title-kontak{
+    position: relative;
+    margin-bottom: 25px;
+}
+.widget_title .title-kontak::after{
+    content: "";
+    position: absolute;
+    border-radius: 5px;
+    width: 65px;
+    top: 25px;
+    height: 3px;
+    display: block;
+    margin:0 auto;
+    background-color: red;
+}
+
+.widget_title .title-berita-terbaru{
+    position: relative;
+    margin-bottom: 25px;
+}
+.widget_title .title-berita-terbaru::after{
+    content: "";
+    position: absolute;
+    border-radius: 4px;
+    width: 127px;
+    height: 3px;
+    top: 25px;
+    display: block;
+    margin:0 auto;
+    background-color: red;
+}
+
+.widget_title .title-alamat{
+    position: relative;
+    margin-bottom: 25px;
+}
+.widget_title .title-alamat::after{
+    content: "";
+    position: absolute;
+    border-radius: 5px;
+    width: 64px;
+    height: 3px;
+    top: 25px;
+    display: block;
+    margin:0 auto;
+    background-color: red;
+}
+
+.widget_body { 
+    padding:10px 0px; 
+    font-weight:normal; 
+}
+
+/* Footer Area CSS */
+
+.bottom-footer-area {
+  background-color: #141414;
+  padding: 30px 0;
+  text-align: center;
+}
+
+.footer-widget { 
+    margin-bottom:20px; 
+}
+.footer-widget .footer-widget_title { 
+    font-size:15px; 
+    font-weight:500; 
+    text-transform:uppercase; 
+    color: #ffffff; 
+}
+.footer-widget_body { 
+    padding:10px 0px; 
+    color: #808080; 
+    font-weight:normal; 
+}
+
+
+.latest-blog-posts .latest-blog-posts .latest-blog-post-thumb {
+  width: 20%;
+  margin-right: 15px;
+}
+
+.latest-blog-posts .latest-blog-posts .latest-blog-post-content {
+  -webkit-transition-duration: 500ms;
+  transition-duration: 500ms;
+  margin-bottom: 3px;
+  width: 80%;
+}
+
+
+.latest-blog-posts .latest-blog-posts .latest-blog-post-content .post-title h6:hover,
+.latest-blog-posts .latest-blog-post-content .post-title h6:focus {
+  color: red;
+}
+
+.latest-blog-posts .latest-blog-posts .latest-blog-post-content .post-date {
+  font-size: 12px;
+  font-weight: normal;
+  font-style: normal;
+  color: red;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .latest-blog-posts .latest-blog-posts .latest-blog-post-content .post-title h6 {
+    font-size: 14px;
+  }
+
+}
+
+/* end section */
